@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppoins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    scroll-snap-align: start;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.column-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100vw;
+    height: 100vh;
+    background: #000942;
+    padding-left: 11%;
+    padding-right: 8%;
+    position: relative;
+    background-image: url(assetts/photo.png);
+    background-size: 38%;
+    background-repeat: no-repeat;
+    background-position: 92% 100%;
+}
+
+.second {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}
+
+.third {
+    width: 100vw;
+    height: 100vh;
+    margin-left: 100px;
+    background: darkblue;
+    position: relative;
+}
+
+footer {
+    background: black;
+    position: absolute;
+    bottom: 0;
+}
+
+.footerContainer {
+    width: 100vw;
+    padding: 70px 30px 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover {
+    background-color: black;
+    transition: 0.2s;
+}
+
+.socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: nonedisc;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px 20px 0 0;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+@media (max-width: 700px){
+    body {
+        overflow-x: hidden;
+    }
+
+    .footerNav ul{
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .footerNav ul li a {
+        margin: 20px 0 0 0;
+    }
+
+    .side-nav {
+        display: none !important;
+    }
+
+    .third {
+        margin-left: 0px !important;
+    }
+
+    .footerBottom p {
+        font-size: 0.8em;
+    }
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0 15px;
+    border-bottom: 1px solid #bababa;
+}
+
+.top-nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.top-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+
+.top-nav button {
+    background: #e91e63;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.side-nav {
+    position: fixed;
+    background: #e91e63;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+    background: linear-gradient(#00bcd4, #e91e63, #3f51b5, #00bcd4);
+    background-size: 100% 500%;
+    background-position: 0 40%;
+    
+}
+
+.side-nav:hover{
+    animation: backcolor 20s linear infinite;
+}
+
+@keyframes backcolor {
+    0%{
+        background-position: 0 40%;
+    }
+    100%{
+        background-position: 0 400%;
+    }
+}
+
+.side-nav .logo{
+    width: 60px;
+    cursor: pointer;
+}
+
+.side-nav a{
+    text-decoration: none;
+    color: #fff;
+    transform: rotate(-90deg) translateX(50%);
+    width: max-content;
+}
+
+.text-box {
+    margin-top: 20%;
+    font-size: 18px;
+    color: #fff;
+}
+
+.text-box h1{
+    font-weight: 500;
+    font-size: 86px;
+    max-width: 550px;
+    line-height: 75px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.text-box .icon{
+    background: #e91e63;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-box .icon img{
+    width: 15px;
+}
